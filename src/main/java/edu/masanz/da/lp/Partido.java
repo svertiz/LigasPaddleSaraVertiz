@@ -19,12 +19,9 @@ public class Partido {
      * Constructor vacío. Inicializa el nombre de los equipos como "E1" y "E2" e instancia los tres marcadores.
      */
     public Partido() {
-        // TODO 51: Instancia todos los atributos. Da a equipo1 el valor "E1" y a equipo2 el valor "E2".
-
-
-
-
-
+        // HECHO TODO 51: Instancia todos los atributos. Da a equipo1 el valor "E1" y a equipo2 el valor "E2".
+        this.equipo1 = "E1";
+        this.equipo2 = "E2";
     }
 
     /**
@@ -34,11 +31,8 @@ public class Partido {
      */
     public Partido(String equipo1, String equipo2) {
         // TODO 52: Instancia todos los atributos adecuadamente.
-
-
-
-
-
+        this.equipo1 = equipo1;
+        this.equipo2 = equipo2;
     }
 
     /**
@@ -47,14 +41,14 @@ public class Partido {
      * @return Devuelve el nombre o cadena vacía si i no es 1 o 2
      */
     public String getEquipo(int i) {
-        // TODO 53: Devuelve el nombre del equipo i-ésimo o cadena vacía (utiliza if-else-if-else)
-
-
-
-
-
-
-        return "";
+        // HECHO TODO 53: Devuelve el nombre del equipo i-ésimo o cadena vacía (utiliza if-else-if-else)
+        if (i == 1){
+            return equipo1;
+        } else if (i == 2){
+            return equipo2;
+        } else {
+            return "";
+        }
     }
 
     /**
@@ -64,12 +58,16 @@ public class Partido {
      */
     public Marcador getMarcador(int i) {
         // TODO 54: Devuelve el marcador i-ésimo o null (utiliza switch)
-
-
-
-
-
-        return null;
+        switch (i){
+            case 1:
+                return marcador1;
+            case 2:
+                return marcador2;
+            case 3:
+                return marcador3;
+            default:
+                return null;
+        }
     }
 
     /**
@@ -79,21 +77,6 @@ public class Partido {
     public int getGanador() {
         // TODO 55: Devuelve el número del equipo ganador en base a los marcadores
         // Utiliza getMarcador y getGanador de la clase Marcador
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
