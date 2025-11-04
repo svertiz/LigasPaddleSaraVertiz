@@ -48,15 +48,17 @@ public class GestorLigas {
      * @return Liga correspondiente o null si el número es inválido.
      */
     public Liga getLiga(int numLiga) {
-        // TODO 22: devuelve la liga correspondiente al número proporcionado.
-
-
-
-
-
-
-
-
+        // HECHO TODO 22: devuelve la liga correspondiente al número proporcionado.
+            switch (numLiga){
+                case 1:
+                    return liga1;
+                case 2:
+                    return liga2;
+                case 3:
+                    return liga3;
+                case 4:
+                    return liga4;
+            }
 
 
 
@@ -104,11 +106,14 @@ public class GestorLigas {
      * @return Lista de ligas.
      */
     public String getListaLigas() {
-        // TODO 26: devuelve una lista formateada de las ligas disponibles.
+        // HECHO TODO 26: devuelve una lista formateada de las ligas disponibles.
         // Ej. 1. A       2. B       3. C       4. D
         String s = "";
-
-
+        s += "LISTA DE LIGAS: \n";
+        s += "1. "+liga1;
+        s += "\t2. "+liga2;
+        s += "\t3. "+liga3;
+        s += "\t4. "+liga4;
 
         return s;
     }

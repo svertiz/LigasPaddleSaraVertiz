@@ -1,5 +1,7 @@
 package edu.masanz.da.lp;
 
+import java.util.Scanner;
+
 /**
  * Clase principal para ejecutar la aplicación de gestión de ligas de paddle.
  * Utiliza la clase GestorLigas para gestionar las ligas y la clase Gui para la interacción con el usuario.
@@ -7,29 +9,29 @@ package edu.masanz.da.lp;
 public class App {
 
     private GestorLigas gestorLigas;
+    Scanner sc = new Scanner(System.in);
 
     /**
      * Constructor de la clase App.
      */
     public App() {
-        // TODO 11: instancia el GestorLigas e inicializa las ligas utilizando la clase Init
-
-
+        // HECHO TODO 11: instancia el GestorLigas e inicializa las ligas utilizando la clase Init
+        this.gestorLigas = new GestorLigas();
+        Init.crearLigas(gestorLigas);
     }
 
     /**
      * Método principal para ejecutar la aplicación.
      */
     public void run() {
-        // TODO 12: en un bucle muestra el menú, lee la opción y ejecuta la opción hasta que se elija salir.
-
-
-
-
-
-
-
-
+        // HECHO TODO 12: en un bucle muestra el menú, lee la opción y ejecuta la opción hasta que se elija salir.
+        int opcion = 1;
+        while (opcion != 0){
+            Gui.mostrarMenu();
+            System.out.println("Introduce la opción elegida :");
+            opcion = sc.nextInt();
+            ejecutarOpcion(opcion);
+        }
     }
 
     /**
@@ -37,28 +39,24 @@ public class App {
      * @param numOpc Número de opción seleccionada.
      */
     private void ejecutarOpcion(int numOpc) {
-        // TODO 13: implementa la ejecución de las opciones del menú utilizando un switch.
+        // HECHO TODO 13: implementa la ejecución de las opciones del menú utilizando un switch.
         // Llama a los métodos correspondientes para cada opción.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        switch (numOpc){
+            case 1:
+                listarEquiposLigas();
+                break;
+            case 2:
+                mostrarTablaResultadosLiga();
+                break;
+            case 3:
+                listarCampeonesLigas();
+                break;
+            case 4:
+                anotarMarcadoresLiga();
+                break;
+            case 0:
+                salir();
+        }
     }
 
     /**
@@ -67,9 +65,11 @@ public class App {
     private void listarEquiposLigas() {
         // TODO 14: muestra la lista de ligas, lee el número de liga y muestra la lista de equipos de la liga seleccionada.
 
+        System.out.println(gestorLigas.getListaLigas());
+        System.out.print("\nIntroduce la liga que desea: ");
+        int ligaElegida = sc.nextInt();
 
-
-
+//        gestorLigas.getLiga(ligaElegida).getEquipo(ligaElegida);
 
     }
 
@@ -78,6 +78,11 @@ public class App {
      */
     private void listarCampeonesLigas() {
         // TODO 15: muestra el listado de campeones de todas las ligas.
+        System.out.println();
+
+        for (int i = 0; i < 4; i++) {
+            gestorLigas.getLiga(i).getEquipoCampeon();
+        }
 
 
     }
@@ -146,5 +151,12 @@ public class App {
         Gui.mostrarTexto("Opción no válida");
     }
 
+
+    public static void main(String[] args) {
+        App ap = new App();
+
+        ap.run();
+
+    }
 
 }

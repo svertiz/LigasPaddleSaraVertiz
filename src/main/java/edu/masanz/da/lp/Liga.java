@@ -71,6 +71,9 @@ public class Liga {
      */
     public String getMarcadorPartido(int k, int i, int j) {
         // TODO 34: Devuelve el marcador k del partido entre el equipo i y j
+
+
+
         return "0-0";
     }
 
@@ -82,17 +85,6 @@ public class Liga {
     public String getEquipoCampeon() {
         // TODO 35: Devuelve el nombre del o de los campeones de la liga
         String nombreCampeon = "";
-
-
-
-
-
-
-
-
-
-
-
 
 
         return nombreCampeon;
