@@ -23,13 +23,12 @@ public class Liga {
      * @param equipo4 Nombre del cuarto equipo
      */
     public Liga(String nombreLiga, String equipo1, String equipo2, String equipo3, String equipo4) {
-        // TODO 31: Inicializa todos los atributos de la clase
-
-
-
-
-
-
+        // HECHO TODO 31: Inicializa todos los atributos de la clase
+        this.nombreLiga = nombreLiga;
+        this.equipo1 = equipo1;
+        this.equipo2 = equipo2;
+        this.equipo3 = equipo3;
+        this.equipo4 = equipo4;
     }
 
     /**
@@ -37,8 +36,8 @@ public class Liga {
      * @return Nombre de la liga
      */
     public String getNombreLiga() {
-        // TODO 32: Devuelve el nombre de la liga
-        return "";
+        // HECHO TODO 32: Devuelve el nombre de la liga
+        return nombreLiga;
     }
 
     /**

@@ -22,23 +22,21 @@ public class GestorLigas {
      * @param equipo4
      */
     public void crearLiga(int numLiga, String nombreLiga, String equipo1, String equipo2, String equipo3, String equipo4) {
-        // TODO 21: instancia una nueva liga y asígnala al atributo correspondiente.
+        // HECHO TODO 21: instancia una nueva liga y asígnala al atributo correspondiente.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        switch (numLiga){
+            case 1:
+            this.liga1 = new Liga(nombreLiga,equipo1,equipo2,equipo3,equipo4);
+            break;
+            case 2:
+            this.liga2 = new Liga(nombreLiga,equipo1,equipo2,equipo3,equipo4);
+            break;
+            case 3:
+            this.liga3 = new Liga(nombreLiga,equipo1,equipo2,equipo3,equipo4);
+            break;
+            case 4:
+            this.liga4 = new Liga(nombreLiga,equipo1,equipo2,equipo3,equipo4);
+        }
 
     }
 
@@ -58,11 +56,9 @@ public class GestorLigas {
                     return liga3;
                 case 4:
                     return liga4;
+                default:
+                    return null;
             }
-
-
-
-        return null;
     }
 
     /**
