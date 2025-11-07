@@ -67,8 +67,21 @@ public class GestorLigas {
      * @return Nombre de la liga.
      */
     public String getNombreLiga(int numLiga) {
-        // TODO 23: devuelve el nombre de la liga correspondiente al número proporcionado.
-        return "";
+        // HECHO TODO 23: devuelve el nombre de la liga correspondiente al número proporcionado.
+
+        switch (numLiga){
+            case 1:
+                return liga1.getNombreLiga();
+            case 2:
+                return liga2.getNombreLiga();
+            case 3:
+                return liga3.getNombreLiga();
+            case 4:
+                return liga4.getNombreLiga();
+            default:
+                return "";
+        }
+
     }
 
     /**
@@ -78,9 +91,20 @@ public class GestorLigas {
      * @return Nombre del equipo.
      */
     public String getEquipo(int numLiga, int numEquipo) {
-        // TODO 24: devuelve el nombre del equipo correspondiente al número de liga y número de equipo proporcionados.
+        // HECHO TODO 24: devuelve el nombre del equipo correspondiente al número de liga y número de equipo proporcionados.
 
-        return "";
+        switch (numLiga){
+            case 1:
+                return liga1.getEquipo(numEquipo);
+            case 2:
+                return liga2.getEquipo(numEquipo);
+            case 3:
+                return liga3.getEquipo(numEquipo);
+            case 4:
+                return liga4.getEquipo(numEquipo);
+            default:
+                return "";
+        }
     }
 
     /**
@@ -124,6 +148,11 @@ public class GestorLigas {
         // EJ. 1. A1      2. A2      3. A3      4. A4
         String s = "";
 
+        for (int i = 0; i <= 4; i++) {
+            for (int j = 0; j <= getLiga(i).getEquipo(j).length(); j++) {
+                getEquipo(i,j);
+            }
+        }
 
 
         return s;

@@ -46,19 +46,20 @@ public class Liga {
      * @return Nombre del equipo o cadena vacía si i es inválido
      */
     public String getEquipo(int i) {
-        // TODO 33: Devuelve el nombre del equipo correspondiente o sino cadena vacía
+        // HECHO TODO 33: Devuelve el nombre del equipo correspondiente o sino cadena vacía
 
-
-
-
-
-
-
-
-
-
-
-        return "";
+        switch (i){
+            case 1:
+                return equipo1;
+            case 2:
+                return equipo2;
+            case 3:
+                return equipo3;
+            case 4:
+                return equipo4;
+            default:
+                return "";
+        }
     }
 
     /**

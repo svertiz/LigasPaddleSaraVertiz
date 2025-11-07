@@ -69,6 +69,8 @@ public class App {
         System.out.print("\nIntroduce la liga que desea: ");
         int ligaElegida = sc.nextInt();
 
+        gestorLigas.
+
 //        gestorLigas.getLiga(ligaElegida).getEquipo(ligaElegida);
 
     }
