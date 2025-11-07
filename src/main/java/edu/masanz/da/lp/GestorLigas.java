@@ -144,15 +144,15 @@ public class GestorLigas {
      * @return Lista de equipos de la liga.
      */
     public String getListaEquipos(int numLiga) {
-        // TODO 27: devuelve una lista formateada de los equipos de una liga específica.
+        //HECHO TODO 27: devuelve una lista formateada de los equipos de una liga específica.
         // EJ. 1. A1      2. A2      3. A3      4. A4
         String s = "";
 
-        for (int i = 0; i <= 4; i++) {
-            for (int j = 0; j <= getLiga(i).getEquipo(j).length(); j++) {
-                getEquipo(i,j);
+            for (int j = 1; j <= 4; j++) {
+                if (j == numLiga){
+                    s += j+". "+getEquipo(numLiga,j);
+                }
             }
-        }
 
 
         return s;
@@ -171,7 +171,6 @@ public class GestorLigas {
         //        4. D        D1
         //
         String txt = "";
-
 
 
 
@@ -217,6 +216,15 @@ public class GestorLigas {
 
 
         return "X";
+    }
+
+    public static void main(String[] args) {
+        GestorLigas gl = new GestorLigas();
+        gl.crearLiga(1,"1","A","B","C","D");
+        gl.crearLiga(2,"2","A","B","C","D");
+        gl.crearLiga(3,"3","A","B","C","D");
+        gl.crearLiga(4,"4","A","B","C","D");
+        System.out.println(gl.getListaEquipos(4));
     }
 
 }

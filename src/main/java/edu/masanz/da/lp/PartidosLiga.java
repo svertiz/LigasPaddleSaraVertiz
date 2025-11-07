@@ -60,21 +60,6 @@ public class PartidosLiga {
     public Partido getPartido(int i, int j) {
         // TODO 42: Devuelve la referencia al partido entre los equipos i y j o null si no hay correspondencia
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         return null;
     }
 
