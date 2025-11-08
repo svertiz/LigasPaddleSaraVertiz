@@ -33,21 +33,23 @@ public class PartidosLiga {
      * @param equipo4 Nombre del cuarto equipo
      */
     public PartidosLiga(String equipo1, String equipo2, String equipo3, String equipo4) {
-        // TODO 41: Instancia todos los atributos de la clase creando los partidos entre los equipos correspondientes.
+        // HECHO TODO 41: Instancia todos los atributos de la clase creando los partidos entre los equipos correspondientes.
 
+        partido12 = new Partido(equipo1,equipo2);
+        partido13 = new Partido(equipo1,equipo3);
+        partido14 = new Partido(equipo1,equipo4);
 
+        partido21 = new Partido(equipo2,equipo1);
+        partido23 = new Partido(equipo2,equipo3);
+        partido24 = new Partido(equipo2,equipo4);
 
+        partido31 = new Partido(equipo3,equipo1);
+        partido32 = new Partido(equipo3,equipo2);
+        partido34 = new Partido(equipo3,equipo4);
 
-
-
-
-
-
-
-
-
-
-
+        partido41 = new Partido(equipo4,equipo1);
+        partido42 = new Partido(equipo4,equipo2);
+        partido43 = new Partido(equipo4,equipo3);
 
     }
 

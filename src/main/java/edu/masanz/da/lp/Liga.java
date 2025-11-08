@@ -102,5 +102,7 @@ public class Liga {
     public void setMarcadorPartido(int numEquipo1, int numEquipo2, int numMarcador, int v1, int v2) {
         // TODO 36: Fija los valores del marcador del encuentro entre los equipos
 
+
+
     }
 }

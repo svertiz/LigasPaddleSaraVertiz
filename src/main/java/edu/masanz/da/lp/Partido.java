@@ -22,6 +22,9 @@ public class Partido {
         // HECHO TODO 51: Instancia todos los atributos. Da a equipo1 el valor "E1" y a equipo2 el valor "E2".
         this.equipo1 = "E1";
         this.equipo2 = "E2";
+        this.marcador1 = new Marcador();
+        this.marcador2 = new Marcador();
+        this.marcador3 = new Marcador();
     }
 
     /**
@@ -33,6 +36,9 @@ public class Partido {
         // TODO 52: Instancia todos los atributos adecuadamente.
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
+        this.marcador1 = new Marcador();
+        this.marcador2 = new Marcador();
+        this.marcador3 = new Marcador();
     }
 
     /**
