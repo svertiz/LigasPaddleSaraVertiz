@@ -33,7 +33,7 @@ public class Partido {
      * @param equipo2 Nombre del segundo equipo del partido.
      */
     public Partido(String equipo1, String equipo2) {
-        // TODO 52: Instancia todos los atributos adecuadamente.
+        // HECHO TODO 52: Instancia todos los atributos adecuadamente.
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.marcador1 = new Marcador();
@@ -84,7 +84,7 @@ public class Partido {
         // TODO 55: Devuelve el número del equipo ganador en base a los marcadores
         // Utiliza getMarcador y getGanador de la clase Marcador
 
-
+        switch ()
 
         return 0;
     }
