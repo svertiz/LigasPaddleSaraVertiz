@@ -63,7 +63,7 @@ public class Partido {
      * @return Referencia al objeto marcador o null si i es un valor incorrecto
      */
     public Marcador getMarcador(int i) {
-        // TODO 54: Devuelve el marcador i-ésimo o null (utiliza switch)
+        //HECHO TODO 54: Devuelve el marcador i-ésimo o null (utiliza switch)
         switch (i){
             case 1:
                 return marcador1;
